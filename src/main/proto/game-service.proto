@@ -3,7 +3,7 @@ syntax = "proto3";
 option java_multiple_files = true;
 option java_package = "com.github.jrdani.models";
 
-message Die {
+message Dice {
   int32 value = 1;
 }
 
@@ -17,5 +17,5 @@ message GameState {
 }
 
 service GameService {
-  rpc roll(stream Die) returns (stream GameState);
+  rpc roll(stream Dice) returns (stream GameState);
 }
